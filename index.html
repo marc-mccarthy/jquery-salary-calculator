@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <script src="vendors/jquery-3.6.0.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <title>JQuery Salaries Calculator</title>
+</head>
+<body>
+    <div id="titleDiv">
+        <h1>Salary Calculator</h1>
+    </div>
+    <div id="addEmployeeDiv">
+        <h2>Add Employee</h2>
+        <input type="text" id="firstNameInput" placeholder="First Name"/>
+        <input type="text" id="lastNameInput" placeholder="Last Name"/>
+        <input type="text" id="idInput" placeholder="ID"/>
+        <input type="text" id="titleInput" placeholder="Title"/>
+        <input type="number" id="annualSalaryInput" placeholder="Annual Salary"/>
+        <button id="addEmployeeButton">Submit</button>
+    </div>
+    <div id="tableDiv">
+        <table>
+            <tr>
+                <th scope="col" id="firstNameCol">First Name</th>
+                <th scope="col" id="lastNameCol">Last Name</th>
+                <th scope="col" id="idCol">ID</th>
+                <th scope="col" id="titleCol">Title</th>
+                <th scope="col" id="annualSalaryCol">Annual Salary</th>
+            </tr>
+        </table>
+    </div>
+    <div id="totalSalaryDiv">
+        <h3>Total Monthly:</h3>
+    </div>
+</body>
+</html>
