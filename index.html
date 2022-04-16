@@ -20,11 +20,13 @@
         <input type="text" id="idInput" placeholder="ID"/>
         <input type="text" id="titleInput" placeholder="Title"/>
         <input type="number" id="annualSalaryInput" placeholder="Annual Salary"/>
+    <div id="addEmployeeButtonDiv">
         <button id="addEmployeeButton">Submit</button>
     </div>
+    </div>
     <div id="tableDiv">
-        <table>
-            <tr>
+        <table id="tableStart">
+            <tr id="tableHeaders">
                 <th scope="col" id="firstNameCol">First Name</th>
                 <th scope="col" id="lastNameCol">Last Name</th>
                 <th scope="col" id="idCol">ID</th>
@@ -34,7 +36,7 @@
         </table>
     </div>
     <div id="totalSalaryDiv">
-        <h3>Total Monthly:</h3>
+        <h3 id="totalSalaries">Total Monthly:</h3>
     </div>
 </body>
 </html>
