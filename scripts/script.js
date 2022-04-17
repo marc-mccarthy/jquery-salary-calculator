@@ -31,9 +31,8 @@ function addEmployee() {
 }
 
 function assembleTable() {
-    let el = $('#tableStart');
+    let el = $('#tableBody');
     el.empty();
-    el.append(`<tr id="tableHeaders"><th scope="col" id="firstNameCol">First Name</th><th scope="col" id="lastNameCol">Last Name</th><th scope="col" id="idCol">ID</th><th scope="col" id="titleCol">Title</th><th scope="col" id="annualSalaryCol">Annual Salary<th></tr>`);
     for (i = 0; i < employees.length; i++) {
         el.append(`<tr class="employeeRow" id="index${i}"><td id="firstNameEmployee${i}">${employees[i].firstName}</td><td id="lastNameEmployee${i}">${employees[i].lastName}</td><td id="idEmployee${i}">${employees[i].id}</td><td id="titleEmployee${i}">${employees[i].title}</td><td id="annualSalaryEmployee${i}">$${employees[i].annualSalary}</td><td class="deleteEmployee"><button class="deleteButton" data-index="${i}">Delete</button></td></tr>`);
     }
@@ -54,7 +53,7 @@ function totalSalaries() {
 
 function emptyInputs() {
     $('#firstNameInput').val('');
-    $('#lastName').val('');
+    $('#lastNameInput').val('');
     $('#idInput').val('');
     $('#titleInput').val('');
     $('#annualSalaryInput').val('');

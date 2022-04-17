@@ -10,33 +10,40 @@
     <title>JQuery Salaries Calculator</title>
 </head>
 <body>
-    <div id="titleDiv">
+    <div id="mainTitleDiv">
         <h1>Salary Calculator</h1>
     </div>
-    <div id="addEmployeeDiv">
-        <h2>Add Employee</h2>
+    <h2 id="addEmployeeTitle">Add Employee</h2>
+    <div id="addEmployeeInputDiv">
         <input type="text" id="firstNameInput" placeholder="First Name"/>
         <input type="text" id="lastNameInput" placeholder="Last Name"/>
-        <input type="text" id="idInput" placeholder="ID"/>
+        <input type="number" id="idInput" placeholder="ID"/>
         <input type="text" id="titleInput" placeholder="Title"/>
         <input type="number" id="annualSalaryInput" placeholder="Annual Salary"/>
+    </div>
     <div id="addEmployeeButtonDiv">
         <button id="addEmployeeButton">Submit</button>
     </div>
     </div>
     <div id="tableDiv">
+        <h2>Employees</h2>
         <table id="tableStart">
-            <tr id="tableHeaders">
-                <th scope="col" id="firstNameCol">First Name</th>
-                <th scope="col" id="lastNameCol">Last Name</th>
-                <th scope="col" id="idCol">ID</th>
-                <th scope="col" id="titleCol">Title</th>
-                <th scope="col" id="annualSalaryCol">Annual Salary</th>
-            </tr>
+            <thead id="tableHead">
+                <tr id="tableHeaders">
+                    <th scope="col" id="firstNameCol">First Name</th>
+                    <th scope="col" id="lastNameCol">Last Name</th>
+                    <th scope="col" id="idCol">ID</th>
+                    <th scope="col" id="titleCol">Title</th>
+                    <th scope="col" id="annualSalaryCol">Annual Salary</th>
+                    <th id="extraHeader"></th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
         </table>
     </div>
     <div id="totalSalaryDiv">
-        <h3 id="totalSalaries">Total Monthly:</h3>
+        <h2 id="totalSalaries">Total Monthly: $0.00</h2>
     </div>
 </body>
 </html>

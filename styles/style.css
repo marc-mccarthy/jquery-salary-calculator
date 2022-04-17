@@ -1,0 +1,64 @@
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+#mainTitleDiv {
+    text-align: center;
+    background-color: dimgray;
+    color: lightgray;
+    padding: 1px;
+}
+
+#addEmployeeTitle {
+    margin: 30px 0px 0px 0px
+}
+
+#addEmployeeInputDiv {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0px 20px 0px 0px;
+}
+
+input {
+    flex-grow: 1;
+    margin: 20px 5px 20px 0px;
+    border: 1px solid black;
+    font-size: larger;
+}
+
+#addEmployeeButtonDiv {
+    text-align: right;
+    margin: 0px 25px 0px 0px;
+}
+
+#addEmployeeButton {
+    border-radius:5px;
+    padding: 3px;
+    min-width: 150px;
+    min-height: 30px;
+    font-size: larger;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#extraHeader {
+    width: 100px;
+}
+
+.deleteEmployee {
+    text-align: center;
+}
+
+#totalSalaryDiv {
+    text-align: right;
+}
