@@ -62,3 +62,12 @@ th, td {
 #totalSalaryDiv {
     text-align: right;
 }
+
+#tableHeaders {
+    text-align: left;
+    background-color: lightgrey;
+}
+
+.annualSalaryEmployees {
+    text-align: right;
+}

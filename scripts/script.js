@@ -34,7 +34,7 @@ function assembleTable() {
     let el = $('#tableBody');
     el.empty();
     for (i = 0; i < employees.length; i++) {
-        el.append(`<tr class="employeeRow" id="index${i}"><td id="firstNameEmployee${i}">${employees[i].firstName}</td><td id="lastNameEmployee${i}">${employees[i].lastName}</td><td id="idEmployee${i}">${employees[i].id}</td><td id="titleEmployee${i}">${employees[i].title}</td><td id="annualSalaryEmployee${i}">$${employees[i].annualSalary}</td><td class="deleteEmployee"><button class="deleteButton" data-index="${i}">Delete</button></td></tr>`);
+        el.append(`<tr class="employeeRow" id="index${i}"><td id="firstNameEmployee${i}">${employees[i].firstName}</td><td id="lastNameEmployee${i}">${employees[i].lastName}</td><td id="idEmployee${i}">${employees[i].id}</td><td id="titleEmployee${i}">${employees[i].title}</td><td class="annualSalaryEmployees" id="annualSalaryEmployee${i}">$${numberWithCommas(employees[i].annualSalary)}</td><td class="deleteEmployee"><button class="deleteButton" data-index="${i}">Delete</button></td></tr>`);
     }
 }
 
@@ -45,7 +45,7 @@ function totalSalaries() {
     for (i = 0; i < employees.length; i++) {
         totalSalaries += Number(employees[i].annualSalary);
     }
-    el.append(`Total Monthly: $${totalSalaries.toFixed(2)}`);
+    el.append(`Total Monthly: $${numberWithCommas(totalSalaries.toFixed(2))}`);
     if (totalSalaries > 20000) {
         $('#totalSalaries').css('background-color', 'red');
     }
@@ -63,4 +63,8 @@ function deleteEmployee() {
     employees.splice($(this).data('index'), 1);
     assembleTable();
     totalSalaries();
+}
+
+function numberWithCommas(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
