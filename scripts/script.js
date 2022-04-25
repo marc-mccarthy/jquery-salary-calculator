@@ -25,7 +25,7 @@ function addEmployee() {
         }
         employees.push(newEmployee);
         assembleTable();
-        totalSalaries();
+        monthlySalaries();
         emptyInputs();
     }
 }
@@ -34,20 +34,20 @@ function assembleTable() {
     let el = $('#tableBody');
     el.empty();
     for (i = 0; i < employees.length; i++) {
-        el.append(`<tr class="employeeRow" id="index${i}"><td id="firstNameEmployee${i}">${employees[i].firstName}</td><td id="lastNameEmployee${i}">${employees[i].lastName}</td><td id="idEmployee${i}">${employees[i].id}</td><td id="titleEmployee${i}">${employees[i].title}</td><td class="annualSalaryEmployees" id="annualSalaryEmployee${i}">$${numberWithCommas(employees[i].annualSalary)}</td><td class="deleteEmployee"><button class="deleteButton" data-index="${i}">Delete</button></td></tr>`);
+        el.append(`<tr class="employeeRow" id="index${i}"><td id="firstNameEmployee${i}">${employees[i].firstName}</td><td id="lastNameEmployee${i}">${employees[i].lastName}</td><td id="idEmployee${i}">${employees[i].id}</td><td id="titleEmployee${i}">${employees[i].title}</td><td class="annualSalaryEmployees" id="annualSalaryEmployee${i}">$${numberWithCommas(employees[i].annualSalary)}</td><td class="deleteEmployee"><button class="deleteButton" data-id="${i}">Delete</button></td></tr>`);
     }
 }
 
-function totalSalaries() {
-    let el = $('#totalSalaries');
+function monthlySalaries() {
+    let el = $('#monthlySalaries');
     el.empty();
-    let totalSalaries = 0;
+    let monthlySalaries = 0;
     for (i = 0; i < employees.length; i++) {
-        totalSalaries += Number(employees[i].annualSalary);
+        monthlySalaries += ((Number(employees[i].annualSalary)) / 12);
     }
-    el.append(`Total Monthly: $${numberWithCommas(totalSalaries.toFixed(2))}`);
-    if (totalSalaries > 20000) {
-        $('#totalSalaries').css('background-color', 'red');
+    el.append(`Total Monthly: $${numberWithCommas(monthlySalaries.toFixed(2))}`);
+    if (monthlySalaries > 20000) {
+        $('#monthlySalaries').css('background-color', 'red');
     }
 }
 
@@ -60,7 +60,7 @@ function emptyInputs() {
 }
 
 function deleteEmployee() {
-    employees.splice($(this).data('index'), 1);
+    employees.splice($(this).data('id'), 1);
     assembleTable();
     totalSalaries();
 }
