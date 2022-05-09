@@ -36,6 +36,9 @@ function assembleTable() {
     for (i = 0; i < employees.length; i++) {
         el.append(`<tr class="employeeRow" id="index${i}"><td id="firstNameEmployee${i}">${employees[i].firstName}</td><td id="lastNameEmployee${i}">${employees[i].lastName}</td><td id="idEmployee${i}">${employees[i].id}</td><td id="titleEmployee${i}">${employees[i].title}</td><td class="annualSalaryEmployees" id="annualSalaryEmployee${i}">$${numberWithCommas(employees[i].annualSalary)}</td><td class="deleteEmployee"><button class="deleteButton" data-id="${i}">Delete</button></td></tr>`);
     }
+    let el2 = $('#tableFoot')
+    el2.append();
+    el2.append('<><tr></tr>')
 }
 
 function monthlySalaries() {

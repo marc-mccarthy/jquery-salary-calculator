@@ -1,4 +1,5 @@
 body {
+    background-image: url(../images/coins.png);
     font-family: Helvetica, sans-serif;
     font-size: 15px;
 }
@@ -26,6 +27,7 @@ input {
     margin: 20px 5px 20px 0px;
     border: 1px solid black;
     font-size: larger;
+    height: 35px;
 }
 
 #addEmployeeButtonDiv {
@@ -51,6 +53,14 @@ th, td {
     padding: 10px;
 }
 
+tr:nth-child(odd) {
+    background-color: white;
+}
+
+tr:nth-child(even) {
+    background-color: lightgray;
+}
+
 #extraHeader {
     width: 100px;
 }
@@ -60,12 +70,20 @@ th, td {
 }
 
 #monthlySalaryDiv {
+    margin-top: 30px;
     text-align: right;
 }
 
-#tableHeaders {
+#monthlySalaries {
+    padding: 5px;
+}
+
+#tableHead {
     text-align: left;
-    background-color: lightgrey;
+}
+
+#headerRow {
+    background-color: lightgray;
 }
 
 .annualSalaryEmployees {
